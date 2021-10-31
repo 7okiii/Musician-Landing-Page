@@ -1,1 +1,48 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+header {
+  border: 1px solid black;
+  height: 70vh;
+  background-image: url(/img/header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header .header-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70vh;
+  width: 100%;
+  border: 1px solid black;
+  color: white;
+}
+
+header .header-contents h1 {
+  font-size: 9rem;
+}
+
+header .header-contents p {
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 70vh;
+  }
+  header .header h1 {
+    font-size: 6rem;
+  }
+  header .header p {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

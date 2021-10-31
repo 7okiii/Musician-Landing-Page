@@ -1,0 +1,38 @@
+$borderCheck: 1px solid black;
+
+header {
+    border: $borderCheck;
+    height: 70vh;
+    background-image: url(/img/header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    .header-contents {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // overflow: hidden;
+        height: 70vh;
+        width: 100%;
+        border: $borderCheck;
+        color: white;
+        h1 {
+            font-size: 9rem;
+        }
+        p {
+            font-size: 3rem;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    header {
+        height: 70vh;
+        .header h1 {
+            font-size: 6rem;
+        }
+        .header p {
+            font-size: 2rem;
+        }
+    }
+}
