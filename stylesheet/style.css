@@ -85,7 +85,7 @@ header .header-contents p {
 }
 
 .information2 {
-  padding: 10px 30px;
+  padding: 10px 30px 30px 10px;
   background-color: #e0e0e0;
 }
 
@@ -115,6 +115,123 @@ header .header-contents p {
   }
   .information2 .info2-right {
     height: 45vh;
+  }
+}
+
+.albums {
+  padding: 50px 0;
+}
+
+.albums .album-title {
+  font-size: 4rem;
+  margin: 20px 0;
+}
+
+.albums .al-left h2 {
+  font-size: 3rem;
+}
+
+.albums .al-left p {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.albums .al-left i {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.albums .al-left img {
+  width: 100%;
+}
+
+.albums .al-left .fa-spotify {
+  color: #30af30;
+}
+
+.albums .al-left .fa-apple {
+  color: #ff66c4;
+  margin: 0 10px;
+}
+
+.albums .al-left .fa-youtube {
+  color: red;
+}
+
+.albums .al-middle h2 {
+  font-size: 3rem;
+}
+
+.albums .al-middle p {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.albums .al-middle i {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.albums .al-middle img {
+  width: 100%;
+}
+
+.albums .al-middle .fa-spotify {
+  color: #30af30;
+}
+
+.albums .al-middle .fa-apple {
+  color: #ff66c4;
+  margin: 0 10px;
+}
+
+.albums .al-middle .fa-youtube {
+  color: red;
+}
+
+.albums .al-right h2 {
+  font-size: 3rem;
+}
+
+.albums .al-right p {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.albums .al-right i {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.albums .al-right img {
+  width: 100%;
+}
+
+.albums .al-right .fa-spotify {
+  color: #30af30;
+}
+
+.albums .al-right .fa-apple {
+  color: #ff66c4;
+  margin: 0 10px;
+}
+
+.albums .al-right .fa-youtube {
+  color: red;
+}
+
+@media screen and (max-width: 768px) {
+  .albums {
+    text-align: center;
+  }
+  .albums .al-left {
+    margin: 40px 0;
+  }
+  .albums .al-middle {
+    margin: 40px 0;
+  }
+  .albums .al-right {
+    margin: 40px 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

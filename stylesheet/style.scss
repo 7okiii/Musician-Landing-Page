@@ -5,6 +5,36 @@
     align-items: center;
 }
 
+@mixin albums {
+    h2 {
+        font-size: 3rem;
+    }
+    p {
+        margin-top: 15px;
+        font-size: 1.5rem;
+    }
+    i {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+@mixin sns {
+    .fa-spotify {
+        color: rgb(48, 175, 48);
+    }
+    .fa-apple {
+        color: rgb(255, 102, 196);
+        margin: 0 10px;
+    }
+    .fa-youtube {
+        color: red;
+    }
+}
+
 $borderCheck: 1px solid black;
 
 header {
@@ -68,7 +98,7 @@ header {
 }
 
 .information2 {
-    padding: 10px 30px;
+    padding: 10px 30px 30px 10px;
     background-color: rgb(224, 224, 224);
     .info2-left {
         img {
@@ -87,6 +117,46 @@ header {
         }
         .info2-right {
             height: 45vh;
+        }
+    }
+}
+
+.albums {
+    padding: 50px 0;
+    .album-title {
+        font-size: 4rem;
+        margin: 20px 0;
+
+    }
+    // padding: 30px 90px;
+    // margin-top: 50px;
+    // text-align: center;
+    .al-left {
+        @include albums;
+        @include sns;
+    }
+    .al-middle {
+        @include albums;
+        @include sns;
+
+    }
+    .al-right {
+        @include albums;
+        @include sns;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .albums {
+        text-align: center;
+        .al-left {
+            margin: 40px 0;
+        }
+        .al-middle {
+            margin: 40px 0;
+        }
+        .al-right {
+            margin: 40px 0;
         }
     }
 }
