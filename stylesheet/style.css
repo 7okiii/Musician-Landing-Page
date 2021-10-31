@@ -59,12 +59,12 @@ header .header-contents p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .information .info-left h2 {
@@ -80,6 +80,40 @@ header .header-contents p {
     height: 40vh;
   }
   .information .info-right {
+    height: 45vh;
+  }
+}
+
+.information2 {
+  padding: 10px 30px;
+  background-color: #e0e0e0;
+}
+
+.information2 .info2-left img {
+  width: 100%;
+}
+
+.information2 .info2-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .information2 .info2-left {
+    height: 40vh;
+  }
+  .information2 .info2-right {
     height: 45vh;
   }
 }
