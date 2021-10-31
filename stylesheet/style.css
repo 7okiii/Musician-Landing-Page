@@ -45,4 +45,42 @@ header .header-contents p {
     font-size: 2rem;
   }
 }
+
+.information {
+  padding: 30px;
+  background-color: #e0e0e0;
+}
+
+.information .info-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.information .info-left h2 {
+  font-size: 4rem;
+}
+
+.information .info-right img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .information .info-left {
+    height: 40vh;
+  }
+  .information .info-right {
+    height: 45vh;
+  }
+}
 /*# sourceMappingURL=style.css.map */

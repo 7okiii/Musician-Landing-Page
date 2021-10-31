@@ -36,3 +36,33 @@ header {
         }
     }
 }
+
+.information {
+    padding: 30px;
+    background-color: rgb(224, 224, 224);
+    .info-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h2 {
+            font-size: 4rem;
+        }
+    }
+    .info-right {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .information {
+        .info-left {
+            height: 40vh;
+        }
+        .info-right {
+            height: 45vh;
+        }
+    }
+}
