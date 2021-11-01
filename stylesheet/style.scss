@@ -92,7 +92,7 @@ header {
 
 .information {
     padding: 30px;
-    background-color: rgb(224, 224, 224);
+    // background-color: rgb(224, 224, 224);
     .info-left {
         @include displayColumn;
         h2 {
@@ -119,7 +119,7 @@ header {
 
 .information2 {
     padding: 10px 30px 30px 10px;
-    background-color: rgb(224, 224, 224);
+    // background-color: rgb(224, 224, 224);
     .info2-left {
         img {
             width: 100%;
@@ -143,6 +143,7 @@ header {
 
 .albums {
     padding: 50px 0;
+    background-color: rgb(236, 236, 236);
     .album-title {
         font-size: 4rem;
         margin: 20px 0;
