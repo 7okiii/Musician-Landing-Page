@@ -48,6 +48,7 @@ header .header-contents p {
 
 .information {
   padding: 30px;
+  margin-top: 30px;
 }
 
 .information .info-left {
@@ -64,14 +65,21 @@ header .header-contents p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #ececec;
+  padding: 0;
 }
 
 .information .info-left h2 {
   font-size: 4rem;
 }
 
+.information .info-right {
+  padding: 0;
+}
+
 .information .info-right img {
   width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -84,11 +92,17 @@ header .header-contents p {
 }
 
 .information2 {
-  padding: 10px 30px 30px 10px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.information2 .info2-left {
+  padding: 0;
 }
 
 .information2 .info2-left img {
   width: 100%;
+  height: 100%;
 }
 
 .information2 .info2-right {
@@ -105,6 +119,8 @@ header .header-contents p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #ececec;
+  padding: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -146,16 +162,28 @@ header .header-contents p {
 }
 
 .albums .al-left .fa-spotify {
-  color: #30af30;
+  color: rgba(26, 145, 26, 0.747);
+}
+
+.albums .al-left .fa-spotify:hover {
+  color: #3a5322;
 }
 
 .albums .al-left .fa-apple {
-  color: #ff66c4;
+  color: rgba(221, 47, 154, 0.747);
   margin: 0 10px;
 }
 
+.albums .al-left .fa-apple:hover {
+  color: #53224f;
+}
+
 .albums .al-left .fa-youtube {
-  color: red;
+  color: rgba(230, 0, 0, 0.74);
+}
+
+.albums .al-left .fa-youtube:hover {
+  color: #532222;
 }
 
 .albums .al-middle h2 {
@@ -177,16 +205,28 @@ header .header-contents p {
 }
 
 .albums .al-middle .fa-spotify {
-  color: #30af30;
+  color: rgba(26, 145, 26, 0.747);
+}
+
+.albums .al-middle .fa-spotify:hover {
+  color: #3a5322;
 }
 
 .albums .al-middle .fa-apple {
-  color: #ff66c4;
+  color: rgba(221, 47, 154, 0.747);
   margin: 0 10px;
 }
 
+.albums .al-middle .fa-apple:hover {
+  color: #53224f;
+}
+
 .albums .al-middle .fa-youtube {
-  color: red;
+  color: rgba(230, 0, 0, 0.74);
+}
+
+.albums .al-middle .fa-youtube:hover {
+  color: #532222;
 }
 
 .albums .al-right h2 {
@@ -208,16 +248,28 @@ header .header-contents p {
 }
 
 .albums .al-right .fa-spotify {
-  color: #30af30;
+  color: rgba(26, 145, 26, 0.747);
+}
+
+.albums .al-right .fa-spotify:hover {
+  color: #3a5322;
 }
 
 .albums .al-right .fa-apple {
-  color: #ff66c4;
+  color: rgba(221, 47, 154, 0.747);
   margin: 0 10px;
 }
 
+.albums .al-right .fa-apple:hover {
+  color: #53224f;
+}
+
 .albums .al-right .fa-youtube {
-  color: red;
+  color: rgba(230, 0, 0, 0.74);
+}
+
+.albums .al-right .fa-youtube:hover {
+  color: #532222;
 }
 
 @media screen and (max-width: 768px) {
