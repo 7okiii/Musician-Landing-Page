@@ -125,6 +125,7 @@ header .header-contents p {
 .albums .album-title {
   font-size: 4rem;
   margin: 20px 0;
+  padding: 0;
 }
 
 .albums .al-left h2 {
@@ -232,6 +233,160 @@ header .header-contents p {
   }
   .albums .al-right {
     margin: 40px 0;
+  }
+}
+
+.events {
+  padding: 40px 0;
+}
+
+.events .events-top h2 {
+  font-size: 5rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.events .toronto {
+  height: 100vh;
+  padding: 0;
+  background-image: url(/img/toronto.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.events .toronto .toronto-detail {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(68, 68, 68, 0.377);
+}
+
+.events .toronto .toronto-detail h2 {
+  color: white;
+  font-size: 3rem;
+}
+
+.events .toronto .toronto-detail a {
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 16px 30px;
+  margin-top: 15px;
+}
+
+.events .toronto .toronto-detail a:hover {
+  background-color: #4d4d4d;
+}
+
+.events .vancouver {
+  height: 50vh;
+  padding: 0;
+  background-image: url(/img/vancouver.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.events .vancouver .vancouver-detail {
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(68, 68, 68, 0.377);
+}
+
+.events .vancouver .vancouver-detail h2 {
+  color: white;
+  font-size: 3rem;
+}
+
+.events .vancouver .vancouver-detail a {
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 16px 30px;
+  margin-top: 15px;
+}
+
+.events .vancouver .vancouver-detail a:hover {
+  background-color: #4d4d4d;
+}
+
+.events .newyork {
+  height: 50vh;
+  padding: 0;
+  background-image: url(/img/newyork.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.events .newyork .newyork-detail {
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(68, 68, 68, 0.555);
+}
+
+.events .newyork .newyork-detail h2 {
+  color: white;
+  font-size: 3rem;
+}
+
+.events .newyork .newyork-detail a {
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 16px 30px;
+  margin-top: 15px;
+}
+
+.events .newyork .newyork-detail a:hover {
+  background-color: #4d4d4d;
+}
+
+@media screen and (max-width: 768px) {
+  .events-bottom .toronto {
+    height: 50vh;
+  }
+  .events-bottom .toronto .toronto-detail {
+    height: 50vh;
+  }
+  .events-bottom .vancouver {
+    margin: 10px 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -35,7 +35,27 @@
     }
 }
 
+@mixin backImg {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin btn($btnColor) {
+    a {
+        color: white;
+        background-color: $btnColor;
+        text-decoration: none;
+        border-radius: 25px;
+        padding: 16px 30px;
+        margin-top: 15px;
+        &:hover {
+            background-color: lighten($btnColor,30%);
+        }
+    }
+}
+
 $borderCheck: 1px solid black;
+$btnColor: black;
 
 header {
     border: $borderCheck;
@@ -126,6 +146,7 @@ header {
     .album-title {
         font-size: 4rem;
         margin: 20px 0;
+        padding: 0;
 
     }
     // padding: 30px 90px;
@@ -160,4 +181,77 @@ header {
         }
     }
 }
-   
+
+.events {
+    padding: 40px 0;
+    .events-top {
+        h2 {
+            font-size: 5rem;
+            margin: 20px 0;
+            text-align: center;
+        }
+    }
+    .toronto {
+        height: 100vh;
+        padding: 0;
+        background-image: url(/img/toronto.jpg);
+        @include backImg;
+        .toronto-detail {
+            height: 100vh;
+            @include displayColumn;
+            background-color: rgba(68, 68, 68, 0.377);
+            h2 {
+                color: white;
+                font-size: 3rem;
+            }
+            @include btn($btnColor);
+        }
+    }
+    .vancouver {
+        height: 50vh;
+        padding: 0;
+        background-image: url(/img/vancouver.jpg);
+        @include backImg;
+        .vancouver-detail {
+            height: 50vh;
+            @include displayColumn;
+            background-color: rgba(68, 68, 68, 0.377);
+            h2 {
+                color: white;
+                font-size: 3rem;
+            }
+            @include btn($btnColor);
+        }
+
+    }
+    .newyork {
+        height: 50vh;
+        padding: 0;
+        background-image: url(/img/newyork.jpg);
+        @include backImg;
+        .newyork-detail {
+            height: 50vh;
+            @include displayColumn;
+            background-color: rgba(68, 68, 68, 0.555);
+            h2 {
+                color: white;
+                font-size: 3rem;
+            }
+            @include btn($btnColor);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .events-bottom  {
+        .toronto {
+            height: 50vh;
+            .toronto-detail {
+                height: 50vh;
+            }
+        }
+        .vancouver {
+            margin: 10px 0;
+        }
+    }
+}
