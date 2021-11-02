@@ -1,7 +1,7 @@
 header {
   border: 1px solid black;
   height: 70vh;
-  background-image: url(/img/header.jpg);
+  background-image: url(/img/topBackImg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -24,6 +24,7 @@ header .header-contents {
   width: 100%;
   border: 1px solid black;
   color: white;
+  background-color: rgba(0, 0, 0, 0.514);
 }
 
 header .header-contents h1 {
@@ -141,6 +142,10 @@ header .header-contents p {
   font-size: 4rem;
   margin: 20px 0;
   padding: 0;
+}
+
+.albums img {
+  border: 1px solid rgba(0, 0, 0, 0.199);
 }
 
 .albums .al-left h2 {
@@ -312,6 +317,10 @@ header .header-contents p {
   width: 100%;
 }
 
+.youtube .you-left iframe:hover {
+  opacity: 0.9;
+}
+
 .youtube .you-right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -382,6 +391,12 @@ header .header-contents p {
       -ms-flex-align: center;
           align-items: center;
   background-color: rgba(68, 68, 68, 0.377);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.events .toronto .toronto-detail:hover {
+  background-color: rgba(68, 68, 68, 0.603);
 }
 
 .events .toronto .toronto-detail h2 {
@@ -425,7 +440,13 @@ header .header-contents p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: .5s;
+  transition: .5s;
   background-color: rgba(68, 68, 68, 0.377);
+}
+
+.events .vancouver .vancouver-detail:hover {
+  background-color: rgba(68, 68, 68, 0.603);
 }
 
 .events .vancouver .vancouver-detail h2 {
@@ -469,7 +490,13 @@ header .header-contents p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: .5s;
+  transition: .5s;
   background-color: rgba(68, 68, 68, 0.555);
+}
+
+.events .newyork .newyork-detail:hover {
+  background-color: rgba(68, 68, 68, 0.692);
 }
 
 .events .newyork .newyork-detail h2 {
@@ -584,23 +611,25 @@ header .header-contents p {
 }
 
 .contacts .contacts-right .form {
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 15px;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 .contacts .contacts-right .form input {
   border: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border-bottom: 2px solid black;
+  border-radius: 0;
+  border-bottom: 1px solid black;
 }
 
 .contacts .contacts-right .form textarea {
   border: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border-bottom: 2px solid black;
+  border-radius: 0;
+  border-bottom: 1px solid black;
 }
 
 .contacts .contacts-right button {
