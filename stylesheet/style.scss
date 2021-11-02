@@ -108,6 +108,7 @@ header {
 
 .information {
     padding: 30px;
+    // padding-bottom: 0;
     margin-top: 30px;
     // background-color: rgb(224, 224, 224);
     .info-left {
@@ -140,6 +141,7 @@ header {
 
 .information2 {
     padding: 30px;
+    // padding-top: 0;
     margin-bottom: 30px;
     // background-color: rgb(224, 224, 224);
     .info2-left {
@@ -169,7 +171,7 @@ header {
 
 .albums {
     padding: 50px 0;
-    background-color: rgb(236, 236, 236);
+    background-color: rgba(236, 236, 236, 0.582);
     .album-title {
         font-size: 4rem;
         margin: 20px 0;
@@ -191,6 +193,24 @@ header {
     .al-right {
         @include albums;
         @include sns;
+    }
+}
+
+.youtube {
+    padding: 50px 0;
+    background-color: rgba(236, 236, 236, 0.582);
+    .you-left {
+        @include displayColumn;
+        iframe {
+            width: 100%
+        }
+    }
+    .you-right {
+        @include displayColumn;
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
     }
 }
 
@@ -341,9 +361,20 @@ header {
     }
     .contacts-right {
         .form {
-            background-color: rgba(119, 119, 119, 0.541);
+            // background-color: rgba(119, 119, 119, 0.541);
             border-radius: 15px;
             padding: 15px;
+            border: 2px solid black;
+            input {
+                border: 0;
+                box-shadow: none;
+                border-bottom: 2px solid black;
+            }
+            textarea {
+                border: 0;
+                box-shadow: none;
+                border-bottom: 2px solid black;
+            }
         }
         button {
             width: 100%;
@@ -353,7 +384,7 @@ header {
             border: none;
             border-radius: 5px;
             &:hover {
-                background-color: lighten( $btnColor,20%);
+                background-color: lighten( $btnColor,25%);
             }
         }
     }
