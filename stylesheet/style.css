@@ -272,8 +272,23 @@ header .header-contents p {
   color: #532222;
 }
 
+@media screen and (max-width: 768px) {
+  .albums {
+    text-align: center;
+  }
+  .albums .al-left {
+    margin: 40px 0;
+  }
+  .albums .al-middle {
+    margin: 40px 0;
+  }
+  .albums .al-right {
+    margin: 40px 0;
+  }
+}
+
 .youtube {
-  padding: 50px 0;
+  padding: 40px 0;
   background-color: rgba(236, 236, 236, 0.582);
 }
 
@@ -319,17 +334,17 @@ header .header-contents p {
 }
 
 @media screen and (max-width: 768px) {
-  .albums {
+  .you-left {
+    margin-bottom: 30px;
+  }
+  .you-right i {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .you-right {
     text-align: center;
-  }
-  .albums .al-left {
-    margin: 40px 0;
-  }
-  .albums .al-middle {
-    margin: 40px 0;
-  }
-  .albums .al-right {
-    margin: 40px 0;
   }
 }
 

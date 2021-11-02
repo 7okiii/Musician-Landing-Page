@@ -196,8 +196,24 @@ header {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .albums {
+        text-align: center;
+        .al-left {
+            margin: 40px 0;
+        }
+        .al-middle {
+            margin: 40px 0;
+        }
+        .al-right {
+            margin: 40px 0;
+        }
+    }
+}
+
+
 .youtube {
-    padding: 50px 0;
+    padding: 40px 0;
     background-color: rgba(236, 236, 236, 0.582);
     .you-left {
         @include displayColumn;
@@ -214,20 +230,23 @@ header {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .albums {
-        text-align: center;
-        .al-left {
-            margin: 40px 0;
-        }
-        .al-middle {
-            margin: 40px 0;
-        }
-        .al-right {
-            margin: 40px 0;
-        }
+@media screen and (max-width:768px) {
+    .you-left {
+        margin-bottom: 30px;
+    }
+    .you-right {
+        i {
+            display: none
+        };
     }
 }
+
+@media screen and (max-width:576px) {
+    .you-right {
+        text-align: center;
+    }
+}
+
 
 .events {
     padding: 40px 0;
