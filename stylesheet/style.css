@@ -66,10 +66,16 @@ header .header-contents p {
 
 @media screen and (max-width: 576px) {
   header .header h1 {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
   }
   header .header P {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header .header h1 {
+    font-size: 3.5rem;
   }
 }
 
@@ -122,6 +128,10 @@ header .header-contents p {
 }
 
 @media screen and (max-width: 768px) {
+  .information {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .information .info-left {
     height: 40vh;
   }
@@ -133,10 +143,9 @@ header .header-contents p {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .information {
-    padding-left: 0;
-    padding-right: 0;
+@media screen and (max-width: 400px) {
+  .information .info-left h2 {
+    font-size: 3rem;
   }
 }
 
@@ -207,6 +216,19 @@ header .header-contents p {
   }
 }
 
+@media screen and (max-width: 400px) {
+  .information {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .information2 {
+    padding-bottom: 0;
+  }
+  .information2 .info2-right h2 {
+    font-size: 3rem;
+  }
+}
+
 .albums {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -214,7 +236,7 @@ header .header-contents p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 50px 0;
+  padding: 40px 0;
   background-color: rgba(236, 236, 236, 0.582);
 }
 
@@ -482,14 +504,14 @@ header .header-contents p {
 }
 
 .events {
-  padding: 40px 0;
+  padding: 50px 0;
   padding-bottom: 0;
   text-align: center;
 }
 
 .events .events-top h2 {
   font-size: 5rem;
-  margin: 20px 0;
+  margin-bottom: 30px;
   text-align: center;
   font-family: 'Permanent Marker', cursive;
 }
@@ -528,7 +550,13 @@ header .header-contents p {
 
 .events .toronto .toronto-detail h2 {
   color: white;
-  font-size: 3rem;
+  font-size: 4rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.events .toronto .toronto-detail h3 {
+  font-size: 2rem;
+  color: white;
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -579,7 +607,13 @@ header .header-contents p {
 
 .events .vancouver .vancouver-detail h2 {
   color: white;
-  font-size: 3rem;
+  font-size: 4rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.events .vancouver .vancouver-detail h3 {
+  font-size: 2rem;
+  color: white;
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -630,7 +664,13 @@ header .header-contents p {
 
 .events .newyork .newyork-detail h2 {
   color: white;
-  font-size: 3rem;
+  font-size: 4rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.events .newyork .newyork-detail h3 {
+  font-size: 2rem;
+  color: white;
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -659,11 +699,42 @@ header .header-contents p {
   }
 }
 
+@media screen and (max-width: 400px) {
+  .events {
+    padding-top: 5px;
+  }
+  .events .events-top h2 {
+    margin-bottom: 10px;
+  }
+  .events .toronto h2 {
+    text-align: center;
+    width: 90%;
+  }
+  .events .vancouver h2 {
+    text-align: center;
+    width: 90%;
+  }
+  .events .newyork h2 {
+    text-align: center;
+    width: 100%;
+  }
+}
+
 .contacts {
-  padding: 30px 0;
   background-image: url(/img/backImgLast.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  width: 100%;
+}
+
+.contacts .back {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.856);
+}
+
+.contacts .container {
+  padding: 50px 0;
 }
 
 .contacts .contacts-title h2 {
@@ -759,6 +830,7 @@ header .header-contents p {
   padding: 15px;
   border: 1px solid black;
   font-family: 'Ubuntu', sans-serif;
+  background-color: rgba(255, 255, 255, 0.849);
 }
 
 .contacts .contacts-right .form input {
@@ -768,6 +840,7 @@ header .header-contents p {
   border-radius: 0;
   border-bottom: 1px solid black;
   font-family: 'Ubuntu', sans-serif;
+  background-color: transparent;
 }
 
 .contacts .contacts-right .form textarea {
@@ -777,19 +850,20 @@ header .header-contents p {
   border-radius: 0;
   border-bottom: 1px solid black;
   font-family: 'Ubuntu', sans-serif;
+  background-color: transparent;
 }
 
 .contacts .contacts-right button {
   width: 100%;
   height: 40px;
-  background-color: rgba(0, 0, 0, 0.192);
+  background-color: rgba(0, 0, 0, 0.774);
   color: white;
   border: none;
   border-radius: 5px;
 }
 
 .contacts .contacts-right button:hover {
-  background-color: rgba(64, 64, 64, 0.192);
+  background-color: rgba(64, 64, 64, 0.774);
 }
 
 @media screen and (max-width: 768px) {
@@ -806,9 +880,14 @@ header .header-contents p {
   .contacts h2 {
     text-align: center;
   }
+  .contacts .contacts-left {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    width: 95%;
+  }
   .contacts .contacts-right {
     margin: 0 auto;
-    width: 96%;
+    width: 90%;
   }
 }
 /*# sourceMappingURL=style.css.map */
