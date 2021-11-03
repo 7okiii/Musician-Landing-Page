@@ -35,22 +35,22 @@
 
 @mixin sns {
     .fa-spotify {
-        color: rgba(26, 145, 26, 0.747);
+        color: $colorSpotify;
         &:hover {
-            color: rgb(58, 83, 34);
+            color: lighten($colorSpotify, 15%);
         }
     }
     .fa-apple {
-        color: rgba(221, 47, 154, 0.747);
+        color: $colorApple;
         margin: 0 15px;
         &:hover {
-            color: rgb(83, 34, 79);
+            color: lighten($colorApple, 15%);
         }
     }
     .fa-youtube {
-        color: rgba(230, 0, 0, 0.74);
+        color: $colorYoutube;
         &:hover {
-            color: rgb(83, 34, 34);
+            color: lighten($colorYoutube, 15%);
         }    
     }
 }
@@ -78,20 +78,25 @@
 
 $borderCheck: 1px solid black;
 $btnColor: rgba(0, 0, 0, 0.192);
-$colorTwitter:rgb(122, 146, 252);
-$colorInstagram: rgb(255, 87, 115);
-$colorFacebook: rgb(64, 64, 218);
+
+$colorSpotify: rgb(53, 175, 53);
+$colorApple: rgb(216, 81, 171);
+$colorYoutube: rgb(233, 16, 16);
+
+$colorTwitter:rgb(101, 123, 221);
+$colorInstagram: rgb(238, 95, 119);
+$colorFacebook: rgb(36, 36, 184);
 
 header {
     border: $borderCheck;
-    height: 70vh;
+    height: 90vh;
     // background-image: url(/img/header.jpg);
     background-image: url(/img/topBackImg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     .header-contents {
         @include displayColumn;
-        height: 70vh;
+        height: 90vh;
         width: 100%;
         border: $borderCheck;
         color: white;
@@ -120,9 +125,9 @@ header {
 
 @media screen and (max-width:768px) {
     header {
-        height: 70vh;
+        height: 90vh;
         .header h1 {
-            font-size: 6rem;
+            font-size: 5.5rem;
         }
         .header p {
             font-size: 2rem;
@@ -132,6 +137,10 @@ header {
 
 @media screen and (max-width:576px) {
     header {
+        height: 60vh;
+        .header-contents {
+            height: 60vh;
+        }
         .header h1 {
             font-size: 3.5rem;
         }
@@ -165,6 +174,7 @@ header {
         h2 {
             font-size: 4.5rem;
             font-family: 'Permanent Marker', cursive;
+            margin-bottom: 15px;
         }
     }
     .info-right {
@@ -233,6 +243,7 @@ header {
         h2 {
             font-size: 4rem;
             font-family: 'Permanent Marker', cursive;
+            margin-bottom: 15px;
         }
     }
 }
@@ -300,6 +311,9 @@ header {
         // height: 300px;
         // border: 1px solid rgba(0, 0, 0, 0.199)
         box-shadow: 10px 10px 10px -10px;
+        &:hover {
+            opacity: 0.9;
+        }
     }
     // padding: 30px 90px;
     // margin-top: 50px;
@@ -417,6 +431,9 @@ header {
     padding: 50px 0;
     padding-bottom: 0;
     text-align: center;
+    a {
+        font-family: 'Ubuntu', sans-serif;
+    }
     .events-top {
         h2 {
             font-size: 5rem;
@@ -522,7 +539,7 @@ header {
 
 @media screen and (max-width:400px) {
     .events {
-        padding-top: 5px;
+        padding-top: 25px;
         .events-top h2 {
             margin-bottom: 10px;
         }
@@ -604,20 +621,20 @@ header {
             .fa-twitter {
                 color: $colorTwitter;
                 &:hover {
-                    color: darken($colorTwitter,20%);
+                    color: lighten($colorTwitter,10%);
                 }
             }
             .fa-instagram {
                 color: $colorInstagram;
                 margin: 0 10px;
                 &:hover {
-                    color: darken($colorInstagram,20%);
+                    color: lighten($colorInstagram,10%);
                 }
             }
             .fa-facebook {
                 color: $colorFacebook;
                 &:hover {
-                    color: darken($colorFacebook,20%);
+                    color: lighten($colorFacebook,15%);
                 }
             }
             i {
@@ -690,10 +707,14 @@ header {
         h2 {
             text-align: center;
         }
+        .contact-box {
+            text-align: center;
+            width: 100%;
+        }
         .contacts-left {
             margin: 0 auto;
             margin-bottom: 3rem;
-            width: 95%;
+            width: 94%;
         }
         .contacts-right {
             margin: 0 auto;

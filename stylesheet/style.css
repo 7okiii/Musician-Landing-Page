@@ -6,7 +6,7 @@
 
 header {
   border: 1px solid black;
-  height: 70vh;
+  height: 90vh;
   background-image: url(/img/topBackImg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -26,7 +26,7 @@ header .header-contents {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 70vh;
+  height: 90vh;
   width: 100%;
   border: 1px solid black;
   color: white;
@@ -54,10 +54,10 @@ header .header-contents p {
 
 @media screen and (max-width: 768px) {
   header {
-    height: 70vh;
+    height: 90vh;
   }
   header .header h1 {
-    font-size: 6rem;
+    font-size: 5.5rem;
   }
   header .header p {
     font-size: 2rem;
@@ -65,6 +65,12 @@ header .header-contents p {
 }
 
 @media screen and (max-width: 576px) {
+  header {
+    height: 60vh;
+  }
+  header .header-contents {
+    height: 60vh;
+  }
   header .header h1 {
     font-size: 3.5rem;
   }
@@ -110,6 +116,7 @@ header .header-contents p {
 .information .info-left h2 {
   font-size: 4.5rem;
   font-family: 'Permanent Marker', cursive;
+  margin-bottom: 15px;
 }
 
 .information .info-right {
@@ -189,6 +196,7 @@ header .header-contents p {
 .information2 .info2-right h2 {
   font-size: 4rem;
   font-family: 'Permanent Marker', cursive;
+  margin-bottom: 15px;
 }
 
 @media screen and (max-width: 996px) {
@@ -255,6 +263,10 @@ header .header-contents p {
           box-shadow: 10px 10px 10px -10px;
 }
 
+.albums img:hover {
+  opacity: 0.9;
+}
+
 .albums .al-left h2 {
   font-size: 3rem;
   margin-top: 15px;
@@ -278,28 +290,28 @@ header .header-contents p {
 }
 
 .albums .al-left .fa-spotify {
-  color: rgba(26, 145, 26, 0.747);
+  color: #35af35;
 }
 
 .albums .al-left .fa-spotify:hover {
-  color: #3a5322;
+  color: #61cf61;
 }
 
 .albums .al-left .fa-apple {
-  color: rgba(221, 47, 154, 0.747);
+  color: #d851ab;
   margin: 0 15px;
 }
 
 .albums .al-left .fa-apple:hover {
-  color: #53224f;
+  color: #e68fc9;
 }
 
 .albums .al-left .fa-youtube {
-  color: rgba(230, 0, 0, 0.74);
+  color: #e91010;
 }
 
 .albums .al-left .fa-youtube:hover {
-  color: #532222;
+  color: #f35252;
 }
 
 .albums .al-middle h2 {
@@ -325,28 +337,28 @@ header .header-contents p {
 }
 
 .albums .al-middle .fa-spotify {
-  color: rgba(26, 145, 26, 0.747);
+  color: #35af35;
 }
 
 .albums .al-middle .fa-spotify:hover {
-  color: #3a5322;
+  color: #61cf61;
 }
 
 .albums .al-middle .fa-apple {
-  color: rgba(221, 47, 154, 0.747);
+  color: #d851ab;
   margin: 0 15px;
 }
 
 .albums .al-middle .fa-apple:hover {
-  color: #53224f;
+  color: #e68fc9;
 }
 
 .albums .al-middle .fa-youtube {
-  color: rgba(230, 0, 0, 0.74);
+  color: #e91010;
 }
 
 .albums .al-middle .fa-youtube:hover {
-  color: #532222;
+  color: #f35252;
 }
 
 .albums .al-right h2 {
@@ -372,28 +384,28 @@ header .header-contents p {
 }
 
 .albums .al-right .fa-spotify {
-  color: rgba(26, 145, 26, 0.747);
+  color: #35af35;
 }
 
 .albums .al-right .fa-spotify:hover {
-  color: #3a5322;
+  color: #61cf61;
 }
 
 .albums .al-right .fa-apple {
-  color: rgba(221, 47, 154, 0.747);
+  color: #d851ab;
   margin: 0 15px;
 }
 
 .albums .al-right .fa-apple:hover {
-  color: #53224f;
+  color: #e68fc9;
 }
 
 .albums .al-right .fa-youtube {
-  color: rgba(230, 0, 0, 0.74);
+  color: #e91010;
 }
 
 .albums .al-right .fa-youtube:hover {
-  color: #532222;
+  color: #f35252;
 }
 
 @media screen and (max-width: 991px) {
@@ -507,6 +519,10 @@ header .header-contents p {
   padding: 50px 0;
   padding-bottom: 0;
   text-align: center;
+}
+
+.events a {
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .events .events-top h2 {
@@ -701,7 +717,7 @@ header .header-contents p {
 
 @media screen and (max-width: 400px) {
   .events {
-    padding-top: 5px;
+    padding-top: 25px;
   }
   .events .events-top h2 {
     margin-bottom: 10px;
@@ -797,28 +813,28 @@ header .header-contents p {
 }
 
 .contacts .contacts-left .contacts-sns .fa-twitter {
-  color: #7a92fc;
+  color: #657bdd;
 }
 
 .contacts .contacts-left .contacts-sns .fa-twitter:hover {
-  color: #1640fa;
+  color: #8f9fe6;
 }
 
 .contacts .contacts-left .contacts-sns .fa-instagram {
-  color: #ff5773;
+  color: #ee5f77;
   margin: 0 10px;
 }
 
 .contacts .contacts-left .contacts-sns .fa-instagram:hover {
-  color: #f00028;
+  color: #f38d9e;
 }
 
 .contacts .contacts-left .contacts-sns .fa-facebook {
-  color: #4040da;
+  color: #2424b8;
 }
 
 .contacts .contacts-left .contacts-sns .fa-facebook:hover {
-  color: #1d1d97;
+  color: #4c4cdc;
 }
 
 .contacts .contacts-left .contacts-sns i {
@@ -880,10 +896,14 @@ header .header-contents p {
   .contacts h2 {
     text-align: center;
   }
+  .contacts .contact-box {
+    text-align: center;
+    width: 100%;
+  }
   .contacts .contacts-left {
     margin: 0 auto;
     margin-bottom: 3rem;
-    width: 95%;
+    width: 94%;
   }
   .contacts .contacts-right {
     margin: 0 auto;
