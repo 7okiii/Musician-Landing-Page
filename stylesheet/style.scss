@@ -1,7 +1,10 @@
 * {
     // overflow: hidden;
+    transition: all 0.1s;
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Molle:ital@1&family=Monoton&family=Permanent+Marker&family=Shrikhand&family=Ubuntu&display=swap');
 @mixin displayColumn {
     display: flex;
     flex-direction: column;
@@ -12,10 +15,14 @@
 @mixin albums {
     h2 {
         font-size: 3rem;
+        margin-top: 15px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
     }
     p {
         margin-top: 15px;
         font-size: 1.5rem;
+        font-family: 'Ubuntu', sans-serif;
     }
     i {
         font-size: 1.5rem;
@@ -58,17 +65,19 @@
         color: white;
         background-color: $btnColor;
         text-decoration: none;
-        border-radius: 25px;
+        // border-radius: 25px;
         padding: 16px 30px;
         margin-top: 15px;
+        border: 2px solid white;
+        // border-bottom: 2px solid white;
         &:hover {
-            background-color: lighten($btnColor,30%);
+            background-color: lighten($btnColor,50%);
         }
     }
 }
 
 $borderCheck: 1px solid black;
-$btnColor: black;
+$btnColor: rgba(0, 0, 0, 0.192);
 $colorTwitter:rgb(122, 146, 252);
 $colorInstagram: rgb(255, 87, 115);
 $colorFacebook: rgb(64, 64, 218);
@@ -89,9 +98,22 @@ header {
         background-color: rgba(0, 0, 0, 0.514);
         h1 {
             font-size: 9rem;
+            font-family: 'Monoton', cursive;
         }
         p {
             font-size: 3rem;
+            font-family: 'Ubuntu', sans-serif;
+        }
+    }
+}
+
+@media screen and (max-width:900px) {
+    header {
+        .header h1 {
+            font-size: 7rem;
+        }
+        .header p {
+            font-size: 2.5rem;
         }
     }
 }
@@ -108,17 +130,34 @@ header {
     }
 }
 
+@media screen and (max-width:576px) {
+    header {
+        .header h1 {
+            font-size: 4.5rem;
+        }
+        .header P {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+
 .information {
     padding: 30px;
     // padding-bottom: 0;
     margin-top: 30px;
     // background-color: rgb(224, 224, 224);
+    p {
+        font-family: 'Ubuntu', sans-serif;
+        text-align: center;
+    }
     .info-left {
         @include displayColumn;
-        background-color: rgb(236, 236, 236);
+        background-color: rgba(236, 236, 236, 0.479);
         padding: 0;
         h2 {
-            font-size: 4rem;
+            font-size: 4.5rem;
+            font-family: 'Permanent Marker', cursive;
         }
     }
     .info-right {
@@ -130,14 +169,34 @@ header {
     }
 }
 
+@media screen and (max-width: 996px) {
+    .information {
+        .info-left {
+            h2 {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
 @media screen and (max-width:768px) {
     .information {
         .info-left {
             height: 40vh;
+            h2 {
+                font-size: 4rem;
+            }
         }
         .info-right {
             height: 45vh;
         }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .information {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -146,6 +205,10 @@ header {
     // padding-top: 0;
     margin-bottom: 30px;
     // background-color: rgb(224, 224, 224);
+    p {
+        font-family: 'Ubuntu', sans-serif;
+        text-align: center;
+    }
     .info2-left {
         padding: 0;
         img {
@@ -155,10 +218,25 @@ header {
     }
     .info2-right {
         @include displayColumn;
-        background-color: rgb(236, 236, 236);
+        background-color: rgba(236, 236, 236, 0.479);
         padding: 0;
+        h2 {
+            font-size: 4rem;
+            font-family: 'Permanent Marker', cursive;
+        }
     }
 }
+
+@media screen and (max-width: 996px) {
+    .information2 {
+        .info2-right {
+            h2 {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
 
 @media screen and (max-width:768px) {
     .information2 {
@@ -167,22 +245,38 @@ header {
         }
         .info2-right {
             height: 45vh;
+            h2 {
+                font-size: 4rem;
+            }
         }
     }
 }
 
+@media screen and (max-width:768px) {
+    .information2 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
 .albums {
+    display: flex;
+    justify-content: center;
     padding: 50px 0;
     background-color: rgba(236, 236, 236, 0.582);
     .album-title {
-        font-size: 4rem;
+        font-size: 4.5rem;
         margin: 20px 0;
         padding: 0;
-
+        h2 {
+            font-family: 'Permanent Marker', cursive;
+        }
     }
     img {
         // height: 300px;
-        border: 1px solid rgba(0, 0, 0, 0.199)
+        // border: 1px solid rgba(0, 0, 0, 0.199)
+        box-shadow: 10px 10px 10px -10px;
     }
     // padding: 30px 90px;
     // margin-top: 50px;
@@ -202,17 +296,46 @@ header {
     }
 }
 
+@media screen and (max-width: 991px) {
+    .albums {
+        .al-left {
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+        .al-middle {
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+        .al-right {
+            h2 {
+                font-size: 2.5rem;
+            }
+        } 
+    }
+}
+
 @media screen and (max-width: 768px) {
     .albums {
         text-align: center;
         .al-left {
             margin: 40px 0;
+            h2 {
+                font-size: 3rem;
+            }
         }
         .al-middle {
             margin: 40px 0;
+            h2 {
+                font-size: 3rem;
+            }
         }
         .al-right {
             margin: 40px 0;
+            h2 {
+                font-size: 3rem;
+            }
         }
     }
 }
@@ -220,6 +343,7 @@ header {
 
 .youtube {
     padding: 40px 0;
+    text-align: center;
     background-color: rgba(236, 236, 236, 0.582);
     .you-left {
         @include displayColumn;
@@ -235,6 +359,10 @@ header {
         h2 {
             font-size: 3rem;
             margin-bottom: 1rem;
+            font-family: 'Permanent Marker', cursive;
+        }
+        p {
+            font-family: 'Ubuntu', sans-serif;
         }
     }
 }
@@ -244,9 +372,7 @@ header {
         margin-bottom: 30px;
     }
     .you-right {
-        i {
-            display: none
-        };
+        margin-bottom: 25px;
     }
 }
 
@@ -259,11 +385,14 @@ header {
 
 .events {
     padding: 40px 0;
+    padding-bottom: 0;
+    text-align: center;
     .events-top {
         h2 {
             font-size: 5rem;
             margin: 20px 0;
             text-align: center;
+            font-family: 'Permanent Marker', cursive;
         }
     }
     .toronto {
@@ -282,6 +411,7 @@ header {
             h2 {
                 color: white;
                 font-size: 3rem;
+                font-family: 'Ubuntu', sans-serif;
             }
             @include btn($btnColor);
         }
@@ -302,6 +432,7 @@ header {
             h2 {
                 color: white;
                 font-size: 3rem;
+                font-family: 'Ubuntu', sans-serif;
             }
             @include btn($btnColor);
         }
@@ -323,6 +454,7 @@ header {
             h2 {
                 color: white;
                 font-size: 3rem;
+                font-family: 'Ubuntu', sans-serif;
             }
             @include btn($btnColor);
         }
@@ -345,10 +477,14 @@ header {
 
 .contacts {
     padding: 30px 0;
+    background-image: url(/img/backImgLast.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     .contacts-title {
         h2 {
-            font-size: 3rem;
+            font-size: 4rem;
             margin-bottom: 30px;
+            font-family: 'Permanent Marker', cursive;
         }
     }
     .contacts-left {
@@ -358,6 +494,7 @@ header {
             margin-bottom: 30px;
             p {
                 margin: 10px 0;
+                font-family: 'Ubuntu', sans-serif;
             }
         }
         .address {
@@ -369,12 +506,19 @@ header {
                 margin: 10px 0;
                 border-radius: 7px;
             }
+            p {
+                font-family: 'Ubuntu', sans-serif;
+            }
         }
         h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
+            font-family: 'Ubuntu', sans-serif;
         }
         .contacts-sns {
+            h3 {
+                font-family: 'Ubuntu', sans-serif;
+            }
             .fa-twitter {
                 color: $colorTwitter;
                 &:hover {
@@ -405,17 +549,20 @@ header {
             border-radius: 10px;
             padding: 15px;
             border: 1px solid black;
+            font-family: 'Ubuntu', sans-serif;
             input {
                 border: 0;
                 box-shadow: none;
                 border-radius: 0;
                 border-bottom: 1px solid black;
+                font-family: 'Ubuntu', sans-serif;
             }
             textarea {
                 border: 0;
                 box-shadow: none;
                 border-radius: 0;
                 border-bottom: 1px solid black;
+                font-family: 'Ubuntu', sans-serif;
             }
         }
         button {
@@ -435,6 +582,7 @@ header {
 @media screen and (max-width:768px) {
     .contacts-title {
         margin-bottom: 30px;
+        text-align: center;
         // text-align: center;
     }
     .contacts-left {
@@ -453,6 +601,13 @@ header {
     //     margin: 0 10px;
     // }
     .contacts {
-        margin: 0 15px;
+        // margin: 0 15px;
+        h2 {
+            text-align: center;
+        }
+        .contacts-right {
+            margin: 0 auto;
+            width: 96%;
+        }
     }
 }

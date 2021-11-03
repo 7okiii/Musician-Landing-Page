@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Molle:ital@1&family=Monoton&family=Permanent+Marker&family=Shrikhand&family=Ubuntu&display=swap");
+* {
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
 header {
   border: 1px solid black;
   height: 70vh;
@@ -29,10 +35,21 @@ header .header-contents {
 
 header .header-contents h1 {
   font-size: 9rem;
+  font-family: 'Monoton', cursive;
 }
 
 header .header-contents p {
   font-size: 3rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+@media screen and (max-width: 900px) {
+  header .header h1 {
+    font-size: 7rem;
+  }
+  header .header p {
+    font-size: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -47,9 +64,23 @@ header .header-contents p {
   }
 }
 
+@media screen and (max-width: 576px) {
+  header .header h1 {
+    font-size: 4.5rem;
+  }
+  header .header P {
+    font-size: 1.5rem;
+  }
+}
+
 .information {
   padding: 30px;
   margin-top: 30px;
+}
+
+.information p {
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
 }
 
 .information .info-left {
@@ -66,12 +97,13 @@ header .header-contents p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #ececec;
+  background-color: rgba(236, 236, 236, 0.479);
   padding: 0;
 }
 
 .information .info-left h2 {
-  font-size: 4rem;
+  font-size: 4.5rem;
+  font-family: 'Permanent Marker', cursive;
 }
 
 .information .info-right {
@@ -83,18 +115,39 @@ header .header-contents p {
   height: 100%;
 }
 
+@media screen and (max-width: 996px) {
+  .information .info-left h2 {
+    font-size: 3rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .information .info-left {
     height: 40vh;
+  }
+  .information .info-left h2 {
+    font-size: 4rem;
   }
   .information .info-right {
     height: 45vh;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .information {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .information2 {
   padding: 30px;
   margin-bottom: 30px;
+}
+
+.information2 p {
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
 }
 
 .information2 .info2-left {
@@ -120,8 +173,19 @@ header .header-contents p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #ececec;
+  background-color: rgba(236, 236, 236, 0.479);
   padding: 0;
+}
+
+.information2 .info2-right h2 {
+  font-size: 4rem;
+  font-family: 'Permanent Marker', cursive;
+}
+
+@media screen and (max-width: 996px) {
+  .information2 .info2-right h2 {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -131,30 +195,55 @@ header .header-contents p {
   .information2 .info2-right {
     height: 45vh;
   }
+  .information2 .info2-right h2 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .information2 {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .albums {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 50px 0;
   background-color: rgba(236, 236, 236, 0.582);
 }
 
 .albums .album-title {
-  font-size: 4rem;
+  font-size: 4.5rem;
   margin: 20px 0;
   padding: 0;
 }
 
+.albums .album-title h2 {
+  font-family: 'Permanent Marker', cursive;
+}
+
 .albums img {
-  border: 1px solid rgba(0, 0, 0, 0.199);
+  -webkit-box-shadow: 10px 10px 10px -10px;
+          box-shadow: 10px 10px 10px -10px;
 }
 
 .albums .al-left h2 {
   font-size: 3rem;
+  margin-top: 15px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
 }
 
 .albums .al-left p {
   margin-top: 15px;
   font-size: 1.5rem;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .albums .al-left i {
@@ -193,11 +282,15 @@ header .header-contents p {
 
 .albums .al-middle h2 {
   font-size: 3rem;
+  margin-top: 15px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
 }
 
 .albums .al-middle p {
   margin-top: 15px;
   font-size: 1.5rem;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .albums .al-middle i {
@@ -236,11 +329,15 @@ header .header-contents p {
 
 .albums .al-right h2 {
   font-size: 3rem;
+  margin-top: 15px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
 }
 
 .albums .al-right p {
   margin-top: 15px;
   font-size: 1.5rem;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .albums .al-right i {
@@ -277,6 +374,18 @@ header .header-contents p {
   color: #532222;
 }
 
+@media screen and (max-width: 991px) {
+  .albums .al-left h2 {
+    font-size: 2.5rem;
+  }
+  .albums .al-middle h2 {
+    font-size: 2.5rem;
+  }
+  .albums .al-right h2 {
+    font-size: 2.5rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .albums {
     text-align: center;
@@ -284,16 +393,26 @@ header .header-contents p {
   .albums .al-left {
     margin: 40px 0;
   }
+  .albums .al-left h2 {
+    font-size: 3rem;
+  }
   .albums .al-middle {
     margin: 40px 0;
   }
+  .albums .al-middle h2 {
+    font-size: 3rem;
+  }
   .albums .al-right {
     margin: 40px 0;
+  }
+  .albums .al-right h2 {
+    font-size: 3rem;
   }
 }
 
 .youtube {
   padding: 40px 0;
+  text-align: center;
   background-color: rgba(236, 236, 236, 0.582);
 }
 
@@ -340,14 +459,19 @@ header .header-contents p {
 .youtube .you-right h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.youtube .you-right p {
+  font-family: 'Ubuntu', sans-serif;
 }
 
 @media screen and (max-width: 768px) {
   .you-left {
     margin-bottom: 30px;
   }
-  .you-right i {
-    display: none;
+  .you-right {
+    margin-bottom: 25px;
   }
 }
 
@@ -359,12 +483,15 @@ header .header-contents p {
 
 .events {
   padding: 40px 0;
+  padding-bottom: 0;
+  text-align: center;
 }
 
 .events .events-top h2 {
   font-size: 5rem;
   margin: 20px 0;
   text-align: center;
+  font-family: 'Permanent Marker', cursive;
 }
 
 .events .toronto {
@@ -402,19 +529,20 @@ header .header-contents p {
 .events .toronto .toronto-detail h2 {
   color: white;
   font-size: 3rem;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .events .toronto .toronto-detail a {
   color: white;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.192);
   text-decoration: none;
-  border-radius: 25px;
   padding: 16px 30px;
   margin-top: 15px;
+  border: 2px solid white;
 }
 
 .events .toronto .toronto-detail a:hover {
-  background-color: #4d4d4d;
+  background-color: rgba(128, 128, 128, 0.192);
 }
 
 .events .vancouver {
@@ -452,19 +580,20 @@ header .header-contents p {
 .events .vancouver .vancouver-detail h2 {
   color: white;
   font-size: 3rem;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .events .vancouver .vancouver-detail a {
   color: white;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.192);
   text-decoration: none;
-  border-radius: 25px;
   padding: 16px 30px;
   margin-top: 15px;
+  border: 2px solid white;
 }
 
 .events .vancouver .vancouver-detail a:hover {
-  background-color: #4d4d4d;
+  background-color: rgba(128, 128, 128, 0.192);
 }
 
 .events .newyork {
@@ -502,19 +631,20 @@ header .header-contents p {
 .events .newyork .newyork-detail h2 {
   color: white;
   font-size: 3rem;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .events .newyork .newyork-detail a {
   color: white;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.192);
   text-decoration: none;
-  border-radius: 25px;
   padding: 16px 30px;
   margin-top: 15px;
+  border: 2px solid white;
 }
 
 .events .newyork .newyork-detail a:hover {
-  background-color: #4d4d4d;
+  background-color: rgba(128, 128, 128, 0.192);
 }
 
 @media screen and (max-width: 768px) {
@@ -531,11 +661,15 @@ header .header-contents p {
 
 .contacts {
   padding: 30px 0;
+  background-image: url(/img/backImgLast.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .contacts .contacts-title h2 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 30px;
+  font-family: 'Permanent Marker', cursive;
 }
 
 .contacts .contacts-left {
@@ -563,6 +697,7 @@ header .header-contents p {
 
 .contacts .contacts-left .contact-box p {
   margin: 10px 0;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .contacts .contacts-left .address {
@@ -576,9 +711,18 @@ header .header-contents p {
   border-radius: 7px;
 }
 
+.contacts .contacts-left .address p {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 .contacts .contacts-left h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.contacts .contacts-left .contacts-sns h3 {
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .contacts .contacts-left .contacts-sns .fa-twitter {
@@ -614,6 +758,7 @@ header .header-contents p {
   border-radius: 10px;
   padding: 15px;
   border: 1px solid black;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .contacts .contacts-right .form input {
@@ -622,6 +767,7 @@ header .header-contents p {
           box-shadow: none;
   border-radius: 0;
   border-bottom: 1px solid black;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .contacts .contacts-right .form textarea {
@@ -630,24 +776,26 @@ header .header-contents p {
           box-shadow: none;
   border-radius: 0;
   border-bottom: 1px solid black;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .contacts .contacts-right button {
   width: 100%;
   height: 40px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.192);
   color: white;
   border: none;
   border-radius: 5px;
 }
 
 .contacts .contacts-right button:hover {
-  background-color: #404040;
+  background-color: rgba(64, 64, 64, 0.192);
 }
 
 @media screen and (max-width: 768px) {
   .contacts-title {
     margin-bottom: 30px;
+    text-align: center;
   }
   .contacts-left {
     margin-bottom: 50px;
@@ -655,8 +803,12 @@ header .header-contents p {
 }
 
 @media screen and (max-width: 576px) {
-  .contacts {
-    margin: 0 15px;
+  .contacts h2 {
+    text-align: center;
+  }
+  .contacts .contacts-right {
+    margin: 0 auto;
+    width: 96%;
   }
 }
 /*# sourceMappingURL=style.css.map */
