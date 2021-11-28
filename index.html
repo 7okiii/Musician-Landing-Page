@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./stylesheet/reset.css">
     <link rel="stylesheet" href="./stylesheet/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="./js/jquery.js"></script>
     <title>Naoki Ogata</title>
 </head>
 <body>
@@ -90,11 +91,64 @@
             </div>
         </div>
     </div>
-    <div class="LogModal">
-
+    <div class="LogModal" id="LogModal">
+        <div class="row log-modal-content container">
+            <i class="fas fa-times"></i>
+            <h2><i class="fas fa-user"></i> Name</h2>
+            <div class="col col-12 g-4">
+                <div class="form-floating"> 
+                    <input type="text" class="form-control" id="LGfirstName" placeholder="first name" required>
+                    <label for="LGfirstName">First Name</label>
+                </div>
+            </div>
+            <div class="col col-12 g-4">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="LGlastName" placeholder="lastName" required>
+                    <label for="LGlastName">Last Name</label>
+                </div>
+            </div>
+            <h2><i class="fas fa-envelope"></i> Email</h2>
+            <div class="col col-12 g-4">
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="LGemail" placeholder="email" required>
+                    <label for="LGemail">Email</label>
+                </div>
+            </div>
+            <!-- <div class="col col-12 g-4">
+                <div class="form-floating">
+                    <input type="tel" class="form-control" id="LGtel" placeholder="tel" required>
+                    <label for="LGtel">Phone Number</label>
+                </div>
+            </div> -->
+            <h2><i class="fas fa-unlock-alt"></i> password</h2>
+            <div class="col col-9 g-4">
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="LGpass" placeholder="Password" required>
+                    <label for="LGpass">Password</label>
+                </div>
+            </div>
+            <div class="col col-3 g-4" id="showPass">
+                <p>Show password</p>
+            </div>
+            <div class="col col-12" id="remember">
+                <h3>Remember Me</h3>
+                <input type="checkbox">
+            </div>
+            <div class="col col-12 g-4">
+                <button type="submit">Login</button>
+            </div>
+        </div>
     </div>
     <header>
-        <div class="row header">
+        <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+        </ul>
+        <div class="row header">    
             <div class="col col-12 col-md-6 header-contents">
                 <h1>Welcome!</h1>
                 <p>Naoki Ogata</p>
@@ -278,7 +332,7 @@
                                 </div>
                             </div>
                             <div class="col col-12 g-4">
-                                <button type="submit">Send</button>
+                                <button type="submit" id="send">Send</button>
                             </div>
                         </form>
                     </div>
@@ -287,23 +341,7 @@
         </div>    
         </div>
     </footer>
-    <script>
-        // var userName = document.querySelector("#firstName");
-        // console.log(userName);
-        // userName.addEventListener('blur',function(){
-        //     var pattern =  /^[a-zA-Z]+ [a-zA-Z]+$/;
-        //     console.log(pattern.test);
-        //     if (pattern.test(userName.value)) {
-        //     }else {
-        //         alert('Please enter your name correctly');
-        //         userName.style.backgroundColor = "yellow";
-        //     }
-        // })
-        // function changeBg() {
-
-        // }
-
-    </script>
+    <script src="./js/style.js"></script>
 </body>
 <script src="./js/bootstrap.bundle.js"></script>
 </html>

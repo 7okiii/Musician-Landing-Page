@@ -4,8 +4,26 @@
   transition: all 0.1s;
 }
 
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 7vh;
+  background-color: black;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 5px;
+}
+
 header {
-  height: 90vh;
+  height: 95vh;
   width: 100%;
   background-image: url(/img/topBackImg.jpg);
   background-size: cover;
@@ -26,7 +44,7 @@ header .header-contents {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 90vh;
+  height: 88vh;
   width: 100%;
   color: white;
   background-color: rgba(0, 0, 0, 0.514);
@@ -40,6 +58,14 @@ header .header-contents h1 {
 header .header-contents p {
   font-size: 3rem;
   font-family: 'Ubuntu', sans-serif;
+}
+
+.header {
+  position: relative;
+}
+
+nav {
+  position: absolute;
 }
 
 @media screen and (max-width: 900px) {
@@ -964,6 +990,103 @@ header .header-contents p {
 }
 
 .RegModal .reg-modal-content .fa-times {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  width: auto;
+}
+
+.LogModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.562);
+}
+
+.LogModal .log-modal-content {
+  position: relative;
+  margin: 15% auto;
+  width: 500px;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid black;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: rgba(255, 255, 255, 0.962);
+}
+
+.LogModal .log-modal-content h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.LogModal .log-modal-content input {
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: transparent;
+}
+
+.LogModal .log-modal-content button {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.774);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.LogModal .log-modal-content button:hover {
+  background-color: rgba(64, 64, 64, 0.774);
+}
+
+.LogModal .log-modal-content #showPass {
+  height: 50px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.774);
+  color: white;
+  border-radius: 5px;
+}
+
+.LogModal .log-modal-content #showPass:hover {
+  background-color: rgba(64, 64, 64, 0.774);
+}
+
+.LogModal .log-modal-content #remember {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.LogModal .log-modal-content #remember input {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.LogModal .log-modal-content .fa-times {
   position: absolute;
   right: 15px;
   cursor: pointer;
