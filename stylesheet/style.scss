@@ -87,9 +87,12 @@ $colorTwitter:rgb(101, 123, 221);
 $colorInstagram: rgb(238, 95, 119);
 $colorFacebook: rgb(36, 36, 184);
 
+
+
 header {
-    border: $borderCheck;
+    // border: $borderCheck;
     height: 90vh;
+    width: 100%;
     // background-image: url(/img/header.jpg);
     background-image: url(/img/topBackImg.jpg);
     background-size: cover;
@@ -98,7 +101,7 @@ header {
         @include displayColumn;
         height: 90vh;
         width: 100%;
-        border: $borderCheck;
+        // border: $borderCheck;
         color: white;
         background-color: rgba(0, 0, 0, 0.514);
         h1 {
@@ -445,7 +448,7 @@ header {
     .toronto {
         height: 100vh;
         padding: 0;
-        background-image: url(/img/toronto.jpg);
+        background-image: url("/img/toronto.jpg");
         @include backImg;
         .toronto-detail {
             height: 100vh;
@@ -722,3 +725,58 @@ header {
         }
     }
 }
+
+.RegModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.562);
+    .reg-modal-content {
+        position: relative;
+        margin: 15% auto;
+        width: 60%;
+        border-radius: 10px;
+        padding: 15px;
+        border: 1px solid black;
+        font-family: 'Ubuntu', sans-serif;
+        background-color: rgba(255, 255, 255, 0.962);
+        h2 {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        input {
+            border: 0;
+            box-shadow: none;
+            border-radius: 0;
+            border-bottom: 1px solid black;
+            margin-bottom: 10px;
+            font-family: 'Ubuntu', sans-serif;
+            background-color: transparent;
+        }
+        button {
+            width: 100%;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.774);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            &:hover {
+                background-color: lighten( rgba(0, 0, 0, 0.774),25%);
+            }
+        }
+        .fa-times {
+            position: absolute;
+            right: 15px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            width: auto;
+        }
+    }
+}
+
