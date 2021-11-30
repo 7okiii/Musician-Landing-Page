@@ -15,7 +15,7 @@
 <body>
     <div class="RegModal row" id="RegModal">
         <div class="row reg-modal-content container">
-            <i class="fas fa-times"></i>
+            <i class="fas fa-times" id="regTimes"></i>
             <h2><i class="fas fa-user"></i> Your Name</h2>
             <div class="col col-12 col-xl-6 g-4">
                 <div class="form-floating"> 
@@ -74,31 +74,34 @@
                 </div>
             </div>
             <h2><i class="fas fa-unlock-alt"></i> Create your password</h2>
-            <div class="col col-6 g-4">
+            <div class="col col-12 col-lg-5 g-4">
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="RGpass" placeholder="Password" required>
+                    <input type="password" class="form-control pass" id="RGpass" placeholder="Password" required>
                     <label for="RGpass">Password</label>
                 </div>
             </div>
-            <div class="col col-6 g-4">
+            <div class="col col-12 col-lg-5 g-4">
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="RGpass2" placeholder="Password2" required>
+                    <input type="password" class="form-control pass" id="RGpass2" placeholder="Password2" required>
                     <label for="RGpass2">Confirm your password</label>
                 </div>
             </div>
+            <div class="col col-2">
+                <button id="RegShowPass">Show Password</button>
+            </div>
             <div class="col col-12 g-4">
-                <button type="submit">Send</button>
+                <button type="submit" id="regSend">Register</button>
             </div>
         </div>
     </div>
     <div class="LogModal" id="LogModal">
         <div class="row log-modal-content container">
-            <i class="fas fa-times"></i>
+            <i class="fas fa-times" id="logTimes"></i>
             <h2><i class="fas fa-user"></i> Name</h2>
             <div class="col col-12 g-4">
                 <div class="form-floating"> 
                     <input type="text" class="form-control" id="LGfirstName" placeholder="first name" required>
-                    <label for="LGfirstName">First Name</label>
+                    <label for="LGfirstName" id="logFname">First Name</label>
                 </div>
             </div>
             <div class="col col-12 g-4">
@@ -107,19 +110,31 @@
                     <label for="LGlastName">Last Name</label>
                 </div>
             </div>
-            <h2><i class="fas fa-envelope"></i> Email</h2>
-            <div class="col col-12 g-4">
+            <div class="col col-12">
+                <h2>Login with</h2>
+            </div>
+            <div class="col col-6 g-4 logtype">
+                <label for="email">Email</label>
+                <input type="radio" name="login" id="logEmail" checked>
+            </div>
+            <div class="col col-6 g-4 logtype">
+                <label for="tel">Phone Number</label>
+                <input type="radio" name="login" id="logTel">
+            </div>
+            <div class="col col-12 g-4 logEmail">
+                <h2><i class="fas fa-envelope"></i> Email</h2>
                 <div class="form-floating">
                     <input type="email" class="form-control" id="LGemail" placeholder="email" required>
                     <label for="LGemail">Email</label>
                 </div>
             </div>
-            <!-- <div class="col col-12 g-4">
+            <div class="col col-12 g-4 logTel" style="display: none;">
+                <h2><i class="fas fa-phone-alt"></i> Phone Number</h2>
                 <div class="form-floating">
                     <input type="tel" class="form-control" id="LGtel" placeholder="tel" required>
                     <label for="LGtel">Phone Number</label>
                 </div>
-            </div> -->
+            </div>
             <h2><i class="fas fa-unlock-alt"></i> password</h2>
             <div class="col col-9 g-4">
                 <div class="form-floating">
@@ -128,24 +143,24 @@
                 </div>
             </div>
             <div class="col col-3 g-4" id="showPass">
-                <p>Show password</p>
+                <button id="logShowPass">Show Password</button>
             </div>
             <div class="col col-12" id="remember">
                 <h3>Remember Me</h3>
                 <input type="checkbox">
             </div>
             <div class="col col-12 g-4">
-                <button type="submit">Login</button>
+                <button type="submit" id="login">Login</button>
             </div>
         </div>
     </div>
     <header>
         <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Register</a>
+              <a id="regBtn" class="nav-link active" aria-current="page" href="#">Register</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
+              <a id="logBtn" class="nav-link" href="#">Login</a>
             </li>
         </ul>
         <div class="row header">    

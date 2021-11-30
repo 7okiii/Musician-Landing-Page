@@ -745,7 +745,7 @@ nav {
 }
 
 .RegModal {
-    display: none;
+    // display: none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -842,19 +842,19 @@ nav {
                 background-color: lighten( rgba(0, 0, 0, 0.774),25%);
             }
         }
-        #showPass {
-            height: 50px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.774);
-            color: white;
-            border-radius: 5px;
-            &:hover {
-                background-color: lighten( rgba(0, 0, 0, 0.774),25%);
-            }
-        }
+        // #showPass {
+        //     height: 50px;
+        //     cursor: pointer;
+        //     display: flex;
+        //     align-items: center;
+        //     text-align: center;
+        //     background-color: rgba(0, 0, 0, 0.774);
+        //     color: white;
+        //     border-radius: 5px;
+        //     &:hover {
+        //         background-color: lighten( rgba(0, 0, 0, 0.774),25%);
+        //     }
+        // }
         #remember {
             display: flex;
             align-items: center;
@@ -870,6 +870,17 @@ nav {
             cursor: pointer;
             font-size: 1.5rem;
             width: auto;
+        }
+    }
+    .logtype {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        input {
+            margin-top: 12px;
+            margin-left: 10px;
         }
     }
 }
