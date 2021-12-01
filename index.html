@@ -14,144 +14,161 @@
 </head>
 <body>
     <div class="RegModal row" id="RegModal">
-        <div class="row reg-modal-content container">
-            <i class="fas fa-times" id="regTimes"></i>
-            <h2><i class="fas fa-user"></i> Your Name</h2>
-            <div class="col col-12 col-xl-6 g-4">
-                <div class="form-floating"> 
-                    <input type="text" class="form-control" id="RGfirstName" placeholder="first name" required>
-                    <label for="RGfirstName">First Name</label>
+        <div class="row reg-modal-content">
+            <form class="row container" id="regForm">
+                <h2 id="regTitle">Register for a fun club!</h2>
+
+                <i class="fas fa-times" id="regTimes"></i>
+                <h2><i class="fas fa-user"></i> Your Name</h2>
+                <div class="col col-12 col-sm-6 g-4">
+                    <div class="form-floating popup"> 
+                        <input type="text" class="form-control" id="RGfirstName" placeholder="first name" required>
+                        <label for="RGfirstName">First Name</label>
+                        <span class="popuptext">Hello</span>
+                    </div>
                 </div>
-            </div>
-            <div class="col col-12 col-xl-6 g-4">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="RGlastName" placeholder="lastName" required>
-                    <label for="RGlastName">Last Name</label>
+                <div class="col col-12 col-sm-6 g-4">
+                    <div class="form-floating popup">
+                        <input type="text" class="form-control" id="RGlastName" placeholder="lastName" required>
+                        <label for="RGlastName">Last Name</label>
+                        <span class="popuptext">Hello</span>
+                    </div>
                 </div>
-            </div>
-            <h2><i class="fas fa-address-book"></i> Your contacts</h2>
-            <div class="col col-12 col-xl-6 g-4">
-                <div class="form-floating">
-                    <input type="email" class="form-control" id="RGemail" placeholder="email" required>
-                    <label for="RGemail">Email</label>
+                <h2><i class="fas fa-address-book"></i> Your contacts</h2>
+                <div class="col col-12 col-lg-6 g-4">
+                    <div class="form-floating popup">
+                        <input type="email" class="form-control" id="RGemail" placeholder="email" required>
+                        <label for="RGemail">Email</label>
+                        <span class="popuptext">Hello</span>
+                    </div>
                 </div>
-            </div>
-            <div class="col col-12 col-xl-6 g-4">
-                <div class="form-floating">
-                    <input type="tel" class="form-control" id="RGtel" placeholder="tel" required>
-                    <label for="RGtel">Phone Number</label>
+                <div class="col col-12 col-lg-6 g-4">
+                    <div class="form-floating popup">
+                        <input type="tel" class="form-control" id="RGtel" placeholder="tel" required>
+                        <label for="RGtel">Phone Number</label>
+                        <span class="popuptext">Hello</span>
+                    </div>
                 </div>
-            </div>
-            <h2><i class="fas fa-map-marked-alt"></i> Your Address</h2>
-            <div class="col col-12 g-4">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="RGaddress" placeholder="street address" required>
-                    <label for="RGaddress">Street Address</label>
+                <h2><i class="fas fa-map-marked-alt"></i> Your Address</h2>
+                <div class="col col-12 g-4">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="RGaddress" placeholder="street address" required>
+                        <label for="RGaddress">Street Address</label>
+                    </div>
                 </div>
-            </div>
-            <div class="col col-12 g-4">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="RGaddress2" placeholder="street address2">
-                    <label for="RGaddress2">Street Address Line 2</label>
+                <div class="col col-12 g-4">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="RGaddress2" placeholder="street address2">
+                        <label for="RGaddress2">Street Address Line 2</label>
+                    </div>
                 </div>
-            </div>
-            <div class="col col-12 col-lg-6 g-4">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="RGcity" placeholder="City" required>
-                    <label for="RGcity">City</label>
+                <div class="col col-12 col-lg-6 g-4">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="RGcity" placeholder="City" required>
+                        <label for="RGcity">City</label>
+                    </div>
                 </div>
-            </div>
-            <div class="col col-12 col-lg-6 g-4">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="RGprovince" placeholder="Province" required>
-                    <label for="RGcity">Province</label>
+                <div class="col col-12 col-lg-6 g-4">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="RGprovince" placeholder="Province" required>
+                        <label for="RGcity">Province</label>
+                    </div>
                 </div>
-            </div>
-            <div class="col col-6 g-4">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="RGzip" placeholder="Zip code" required>
-                    <label for="RGzip">Zip code</label>
+                <div class="col col-6 g-4">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="RGzip" placeholder="Zip code" required>
+                        <label for="RGzip">Zip code</label>
+                    </div>
                 </div>
-            </div>
-            <h2><i class="fas fa-unlock-alt"></i> Create your password</h2>
-            <div class="col col-12 col-lg-5 g-4">
-                <div class="form-floating">
-                    <input type="password" class="form-control pass" id="RGpass" placeholder="Password" required>
-                    <label for="RGpass">Password</label>
+                <h2><i class="fas fa-unlock-alt"></i> Create your password</h2>
+                <div class="col col-12 col-lg-5 g-4">
+                    <div class="form-floating">
+                        <input type="password" class="form-control pass" id="RGpass" placeholder="Password" required>
+                        <label for="RGpass">Password</label>
+                    </div>
                 </div>
-            </div>
-            <div class="col col-12 col-lg-5 g-4">
-                <div class="form-floating">
-                    <input type="password" class="form-control pass" id="RGpass2" placeholder="Password2" required>
-                    <label for="RGpass2">Confirm your password</label>
+                <div class="col col-12 col-lg-5 g-4">
+                    <div class="form-floating">
+                        <input type="password" class="form-control pass" id="RGpass2" placeholder="Password2" required>
+                        <label for="RGpass2">Confirm your password</label>
+                    </div>
                 </div>
-            </div>
-            <div class="col col-2">
-                <button id="RegShowPass">Show Password</button>
-            </div>
-            <div class="col col-12 g-4">
-                <button type="submit" id="regSend">Register</button>
-            </div>
+                <div class="col col-2">
+                    <button id="RegShowPass" type="button">Show Password</button>
+                </div>
+                <div class="col col-12 g-4">
+                    <button type="submit" id="regSend">Register</button>
+                </div>
+
+    
+            </form>
         </div>
     </div>
     <div class="LogModal" id="LogModal">
         <div class="row log-modal-content container">
-            <i class="fas fa-times" id="logTimes"></i>
-            <h2><i class="fas fa-user"></i> Name</h2>
-            <div class="col col-12 g-4">
-                <div class="form-floating"> 
-                    <input type="text" class="form-control" id="LGfirstName" placeholder="first name" required>
-                    <label for="LGfirstName" id="logFname">First Name</label>
+            <form class="row container" id="logForm">
+                <h2 id="logTitle">Login</h2>
+                <i class="fas fa-times" id="logTimes"></i>
+                <h2><i class="fas fa-user"></i> Name</h2>
+                <div class="col col-12 g-4">
+                    <div class="form-floating popup"> 
+                        <input type="text" class="form-control" id="LGfirstName" placeholder="first name" required>
+                        <label for="LGfirstName" id="logFname">First Name</label>
+                        <span class="popuptext">Hello</span>
+                    </div>
                 </div>
-            </div>
-            <div class="col col-12 g-4">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="LGlastName" placeholder="lastName" required>
-                    <label for="LGlastName">Last Name</label>
+                <div class="col col-12 g-4">
+                    <div class="form-floating popup">
+                        <input type="text" class="form-control" id="LGlastName" placeholder="lastName" required>
+                        <label for="LGlastName">Last Name</label>
+                        <span class="popuptext">Hello</span>
+                    </div>
                 </div>
-            </div>
-            <div class="col col-12">
-                <h2>Login with</h2>
-            </div>
-            <div class="col col-6 g-4 logtype">
-                <label for="email">Email</label>
-                <input type="radio" name="login" id="logEmail" checked>
-            </div>
-            <div class="col col-6 g-4 logtype">
-                <label for="tel">Phone Number</label>
-                <input type="radio" name="login" id="logTel">
-            </div>
-            <div class="col col-12 g-4 logEmail">
-                <h2><i class="fas fa-envelope"></i> Email</h2>
-                <div class="form-floating">
-                    <input type="email" class="form-control" id="LGemail" placeholder="email" required>
-                    <label for="LGemail">Email</label>
+                <div class="col col-12">
+                    <h2>Login with</h2>
                 </div>
-            </div>
-            <div class="col col-12 g-4 logTel" style="display: none;">
-                <h2><i class="fas fa-phone-alt"></i> Phone Number</h2>
-                <div class="form-floating">
-                    <input type="tel" class="form-control" id="LGtel" placeholder="tel" required>
-                    <label for="LGtel">Phone Number</label>
+                <div class="col col-6 g-4 logtype">
+                    <label for="email">Email</label>
+                    <input type="radio" name="login" id="logEmail" checked>
                 </div>
-            </div>
-            <h2><i class="fas fa-unlock-alt"></i> password</h2>
-            <div class="col col-9 g-4">
-                <div class="form-floating">
-                    <input type="password" class="form-control" id="LGpass" placeholder="Password" required>
-                    <label for="LGpass">Password</label>
+                <div class="col col-6 g-4 logtype">
+                    <label for="tel">Phone Number</label>
+                    <input type="radio" name="login" id="logTel">
                 </div>
-            </div>
-            <div class="col col-3 g-4" id="showPass">
-                <button id="logShowPass">Show Password</button>
-            </div>
-            <div class="col col-12" id="remember">
-                <h3>Remember Me</h3>
-                <input type="checkbox">
-            </div>
-            <div class="col col-12 g-4">
-                <button type="submit" id="login">Login</button>
-            </div>
+                <div class="col col-12 g-4 logEmail">
+                    <h2><i class="fas fa-envelope"></i> Email</h2>
+                    <div class="form-floating popup">
+                        <input type="email" class="form-control" id="LGemail" placeholder="email" required>
+                        <label for="LGemail">Email</label>
+                        <span class="popuptext">Hello</span>
+                    </div>
+                </div>
+                <div class="col col-12 g-4 logTel" style="display: none;">
+                    <h2><i class="fas fa-phone-alt"></i> Phone Number</h2>
+                    <div class="form-floating popup">
+                        <input type="tel" class="form-control" id="LGtel" placeholder="tel" required>
+                        <label for="LGtel">Phone Number</label>
+                        <span class="popuptext">Hello</span>
+                    </div>
+                </div>
+                <h2><i class="fas fa-unlock-alt"></i> password</h2>
+                <div class="col col-12 col-md-9 g-4">
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="LGpass" placeholder="Password" required>
+                        <label for="LGpass">Password</label>
+                    </div>
+                </div>
+                <div class="col col-12 col-md-3 g-4" id="showPass">
+                    <button id="logShowPass" type="button">Show Password</button>
+                </div>
+                <div class="col col-12" id="remember">
+                    <h3>Remember Me</h3>
+                    <input type="checkbox">
+                </div>
+                <div class="col col-12 g-4">
+                    <button type="submit" id="login">Login</button>
+                </div>    
+            </form>
         </div>
     </div>
     <header>
@@ -315,7 +332,7 @@
                         </div>
                         <div class="contacts-sns">
                             <!-- <h3>SNS</h3> -->
-                            <a href="https://twitter.com/tamwoodschools?lang=en" target="blank"><i class="fab fa-twitter"></i></a>
+                            <a id="test" href="https://twitter.com/tamwoodschools?lang=en" target="blank"><i class="fab fa-twitter"></i></a>
                             <a href="https://www.instagram.com/tamwoodcareers/?hl=en" target="blank"><i class="fab fa-instagram"></i></a>
                             <a href="https://www.facebook.com/tamwoodcareers/" target="blank"><i class="fab fa-facebook"></i></a>
                         </div>

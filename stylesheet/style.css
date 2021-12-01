@@ -11,6 +11,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   height: 7vh;
   background-color: black;
 }
@@ -18,8 +21,19 @@
 .nav a {
   color: white;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0);
   margin: 0 5px;
+}
+
+.nav a:hover {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.322);
+}
+
+.nav a:focus {
+  color: white;
 }
 
 header {
@@ -937,11 +951,13 @@ nav {
 }
 
 .RegModal {
+  display: none;
+  opacity: 0;
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.562);
@@ -950,12 +966,20 @@ nav {
 .RegModal .reg-modal-content {
   position: relative;
   margin: 15% auto;
-  width: 60%;
+  width: 700px;
   border-radius: 10px;
   padding: 15px;
   border: 1px solid black;
   font-family: 'Ubuntu', sans-serif;
   background-color: rgba(255, 255, 255, 0.962);
+}
+
+.RegModal .reg-modal-content #regTitle {
+  text-align: center;
+  padding-bottom: 35px;
+  border-bottom: 2px solid gray;
+  font-size: 2.5rem;
+  font-family: 'Permanent Marker', cursive;
 }
 
 .RegModal .reg-modal-content h2 {
@@ -988,6 +1012,11 @@ nav {
   background-color: rgba(64, 64, 64, 0.774);
 }
 
+.RegModal .reg-modal-content #RegShowPass {
+  margin-top: 35px;
+  width: 100px;
+}
+
 .RegModal .reg-modal-content .fa-times {
   position: absolute;
   right: 15px;
@@ -996,8 +1025,21 @@ nav {
   width: auto;
 }
 
+@media screen and (max-width: 750px) {
+  .RegModal .reg-modal-content {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .RegModal .reg-modal-content {
+    width: 350px;
+  }
+}
+
 .LogModal {
   display: none;
+  opacity: 0;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -1025,6 +1067,14 @@ nav {
   font-weight: bold;
 }
 
+.LogModal .log-modal-content #logTitle {
+  text-align: center;
+  padding-bottom: 35px;
+  border-bottom: 2px solid gray;
+  font-size: 2.5rem;
+  font-family: 'Permanent Marker', cursive;
+}
+
 .LogModal .log-modal-content input {
   border: 0;
   -webkit-box-shadow: none;
@@ -1046,6 +1096,25 @@ nav {
 }
 
 .LogModal .log-modal-content button:hover {
+  background-color: rgba(64, 64, 64, 0.774);
+}
+
+.LogModal .log-modal-content #RegShowPass {
+  height: 50px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.774);
+  color: white;
+  border-radius: 5px;
+}
+
+.LogModal .log-modal-content #RegShowPass:hover {
   background-color: rgba(64, 64, 64, 0.774);
 }
 
@@ -1091,5 +1160,47 @@ nav {
 .LogModal .logtype input {
   margin-top: 12px;
   margin-left: 10px;
+}
+
+@media screen and (max-width: 550px) {
+  .LogModal .log-modal-content {
+    width: 350px;
+  }
+}
+
+.popup {
+  position: relative;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: rgba(85, 85, 85, 0.719);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 105%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.popup .popup .show {
+  visibility: visible;
+  -webkit-animation: fadein 1s;
+          animation: fadein 1s;
 }
 /*# sourceMappingURL=style.css.map */
