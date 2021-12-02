@@ -1,11 +1,5 @@
 /////REG MODAL
 
-const regBtn = document.getElementById("regBtn");
-const regTimes = document.getElementById("regTimes");
-const regModal = document.getElementById("RegModal");
-// regBtn.addEventListener('click',function(){
-//     regModal.style.display = "block";
-// });
 
 $("#regBtn").on('click',function(){
     // $("#RegModal").css('display','block');
@@ -13,9 +7,6 @@ $("#regBtn").on('click',function(){
     $("#RegModal").animate({opacity:'1'},'500');
 });
 
-// regTimes.addEventListener('click',function(){
-//     regModal.style.display = "none";
-// });
 
 $("#regTimes").on('click',function(){
     $("#RegModal").fadeOut(300);
@@ -38,8 +29,7 @@ window.addEventListener('click',function(event){
 $("input").on('blur',function(event){
     if ($(event.target).val() == "") {
         // alert("Please write your" + " " + event.target.placeholder);
-        $(event.target).css("background-color","lightBlue");
-        event.preventDefault();
+        $(event.target).css("background-color","rgba(114, 156, 208, 0.308)");
     }else {
         $(event.target).css("background-color","transparent");
     }
@@ -60,16 +50,6 @@ showPassBtn.addEventListener('click',function(){
     }
 });
 
-//check if password are matched 
-// $("#regSend").on('click',function(){
-//     if (passInput[0].value != passInput[1].value) {
-//         alert("Password didn't match");
-//     }
-// });
-
-//animation
-
-//validation//
 
 //for first name
 $("#RGfirstName").on('blur',function(){
@@ -104,7 +84,7 @@ function lnameCheck(input) {
 }
 
 //for email
-let emailRegex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 $("#RGemail").on('blur',function(){
     emailCheck($("#RGemail"));
 });
@@ -117,7 +97,6 @@ function emailCheck(input) {
         input.css("background-color","rgba(250, 250, 0, 0.714)");
         popups[2].style.visibility = "visible";
         popups[2].innerHTML = "Please enter your correct Email";
-        //it can be changing the color for the input box
     }
 }
 
@@ -139,12 +118,6 @@ function telCheck(input) {
     }
 }
 
-// $("#regSend").on('click',function(){
-//     fnameCheck($("#RGfirstName"));
-//     lnameCheck($("#RGlastName"));
-//     emailCheck($("#RGemail"));
-//     telCheck($("#RGtel"));
-// });
 
 /////LOG MODAL
 
@@ -158,9 +131,6 @@ $("#logBtn").on('click',function(){
     $("#LogModal").animate({opacity:'1'},'500');
 });
 
-// logTimes.addEventListener('click',function(){
-//     logModal.style.display = "none";
-// });
 
 $("#logTimes").on('click',function(){
     $("#LogModal").fadeOut(300);
@@ -189,13 +159,13 @@ $("#logShowPass").on('click',function(){
 //Chose email or phone number 
 var radios = $("input[name=login]");
 radios.on('click',function(event){
-    // console.log($(event.target).attr("id"));
     if ($(event.target).attr("id") == "logEmail") {
         $(".logEmail").css("display","block");
         $(".logTel").css("display","none");
     }else {
         $(".logEmail").css("display","none");
         $(".logTel").css("display","block");
+        $("#LGemail").val("example@test.com");
     }
 });
 
@@ -204,41 +174,41 @@ var nameRegex = /^[a-zA-Z ]{2,30}$/;
 
 $("#LGfirstName").on('blur',function(){
     if ($("#LGfirstName").val().match(nameRegex)) {
-        popups[4].style.visibility = "hidden";
+        popups[5].style.visibility = "hidden";
     }else {
         $("#LGfirstName").css("background-color","rgba(250, 250, 0, 0.714)");
-        popups[4].style.visibility = "visible";
-        popups[4].innerHTML = "Please enter your correct First Name";
+        popups[5].style.visibility = "visible";
+        popups[5].innerHTML = "Please enter your correct First Name";
     }
 });
 
 $("#LGlastName").on('blur',function(){
     if ($("#LGlastName").val().match(nameRegex)) {
-        popups[5].style.visibility = "hidden";
+        popups[6].style.visibility = "hidden";
     }else {
         $("#LGlastName").css("background-color","rgba(250, 250, 0, 0.714)");
-        popups[5].style.visibility = "visible";
-        popups[5].innerHTML = "Please enter your correct Last Name";
+        popups[6].style.visibility = "visible";
+        popups[6].innerHTML = "Please enter your correct Last Name";
     }
 });
 
 $("#LGemail").on('blur',function(){
     if ($("#LGemail").val().match(emailRegex)) {
-        popups[6].style.visibility = "hidden";
+        popups[7].style.visibility = "hidden";
     }else {
         $("#LGemail").css("background-color","rgba(250, 250, 0, 0.714)");
-        popups[6].style.visibility = "visible";
-        popups[6].innerHTML = "Please enter your correct Email";
+        popups[7].style.visibility = "visible";
+        popups[7].innerHTML = "Please enter your correct Email";
     }
 });
 
 $("#LGtel").on('blur',function(){
     if ($("#LGtel").val().match(telRegex)) {
-        popups[7].style.visibility = "hidden";
+        popups[8].style.visibility = "hidden";
     }else {
         $("#LGtel").css("background-color","rgba(250, 250, 0, 0.714)");
-        popups[7].style.visibility = "visible";
-        popups[7].innerHTML = "Please enter your correct Last Name";
+        popups[8].style.visibility = "visible";
+        popups[8].innerHTML = "Please enter your correct Phone number";
     }
 });
 
@@ -249,35 +219,43 @@ $("#LGtel").on('blur',function(){
 let regForm = document.getElementById("regForm");
 let popups = document.getElementsByClassName("popuptext");
 
+var pCodRegex = /[A-Za-z]\d[A-Za-z] ?\d[A-Za-z]\d/;
+
+$("#RGzip").on('blur',function(){
+    if ($("#RGzip").val().match(pCodRegex)) {
+        popups[4].style.visibility = "hidden";
+    }else {
+        $("#RGzip").css("background-color","rgba(250, 250, 0, 0.714)");
+        popups[4].style.visibility = "visible";
+        popups[4].innerHTML = "Please enter your correct Zip code";
+    }
+});
+
+
+
+
 regForm.addEventListener('submit',function(event){
     var fname = document.getElementById("RGfirstName");
     var lname = document.getElementById("RGlastName");
     var email = document.getElementById("RGemail");
     var phone = document.getElementById("RGtel");
-    console.log(email);
-    if (fname.value.match(nameRegex)) {
+    var pCode = document.getElementById("RGzip");
+    if (fname.value.match(nameRegex) && lname.value.match(nameRegex) && email.value.match(emailRegex) && phone.value.match(telRegex) && pCode.value.match(pCodRegex) && passInput[0].value == passInput[1].value) {    
+        $("#regPop").animate({left:'34%'},'slow');
+        $("#regPop").animate({top:'30px'},'slow');
+        $("#regPop").fadeOut(6000);
+        $("#RegModal").fadeOut(2000);
+        $("#RegModal").animate({opacity:'0'},'500');
     }else {
         event.preventDefault();
-    }
-    if (lname.value.match(nameRegex)) {
-    }else {
-        event.preventDefault();
-    }
-    if (email.value.match(emailRegex)) {
-    }else {
-        event.preventDefault();
-    }
-    if (phone.value.match(telRegex)) {
-    }else {
-        event.preventDefault();
-        // console.log(event.cancelable);
+        alert("Something went wrong. Please check the form.");
     }
     if (passInput[0].value == passInput[1].value) {
     }else {
         alert("Passwords didn't match")
         event.preventDefault();
     }
-    // alert("aa");
+
 });
 
 let logForm = document.getElementById("logForm");
@@ -287,22 +265,13 @@ logForm.addEventListener('submit',function(event){
     var Lname = document.getElementById("LGlastName");
     var Email = document.getElementById("LGemail");
     var Phone = document.getElementById("LGtel");
-    if (Fname.value.match(nameRegex)) {
+    if (Fname.value.match(nameRegex) && Lname.value.match(nameRegex) && Email.value.match(emailRegex) && Phone.value.match(telRegex)) {
+        $("#LogModal").animate({opacity:'0'},'500');
     }else {
         event.preventDefault();
-    }
-    if (Lname.value.match(nameRegex)) {
-    }else {
-        event.preventDefault();
-    }
-    if (Email.value.match(emailRegex)) {
-    }else {
-        event.preventDefault();
-    }
-    if (Phone.value.match(telRegex)) {
-    }else {
-        event.preventDefault();
+        alert("Something went wrong. Please check the form.");
     }
 });
+
 
 
