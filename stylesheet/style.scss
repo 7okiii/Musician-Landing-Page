@@ -3,7 +3,7 @@
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Molle:ital@1&family=Monoton&family=Permanent+Marker&family=Shrikhand&family=Ubuntu&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Molle:ital@1&family=Monoton&family=Permanent+Marker&family=Shrikhand&family=Ubuntu&display=swap');
 @mixin displayColumn {
     display: flex;
     flex-direction: column;
@@ -113,7 +113,7 @@ header {
     height: 95vh;
     width: 100%;
     // background-image: url(/img/header.jpg);
-    background-image: url(/img/topBackImg.jpg);
+    background-image: url(../img/topBackImg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     .header-contents {
@@ -479,7 +479,7 @@ body {
     .toronto {
         height: 100vh;
         padding: 0;
-        background-image: url("/img/toronto.jpg");
+        background-image: url("../img/toronto.jpg");
         @include backImg;
         .toronto-detail {
             height: 100vh;
@@ -505,7 +505,7 @@ body {
     .vancouver {
         height: 50vh;
         padding: 0;
-        background-image: url(/img/vancouver.jpg);
+        background-image: url(../img/vancouver.jpg);
         @include backImg;
         .vancouver-detail {
             height: 50vh;
@@ -532,7 +532,7 @@ body {
     .newyork {
         height: 50vh;
         padding: 0;
-        background-image: url(/img/newyork.jpg);
+        background-image: url(../img/newyork.jpg);
         @include backImg;
         .newyork-detail {
             height: 50vh;
@@ -601,7 +601,7 @@ body {
 
 .contacts {
     // padding: 30px 0;
-    background-image: url(/img/backImgLast.jpg);
+    background-image: url(../img/backImgLast.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;

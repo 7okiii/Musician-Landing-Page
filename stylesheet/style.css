@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Molle:ital@1&family=Monoton&family=Permanent+Marker&family=Shrikhand&family=Ubuntu&display=swap");
 * {
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
@@ -39,7 +38,7 @@
 header {
   height: 95vh;
   width: 100%;
-  background-image: url(/img/topBackImg.jpg);
+  background-image: url(../img/topBackImg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -578,7 +577,7 @@ body {
 .events .toronto {
   height: 100vh;
   padding: 0;
-  background-image: url("/img/toronto.jpg");
+  background-image: url("../img/toronto.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -635,7 +634,7 @@ body {
 .events .vancouver {
   height: 50vh;
   padding: 0;
-  background-image: url(/img/vancouver.jpg);
+  background-image: url(../img/vancouver.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -692,7 +691,7 @@ body {
 .events .newyork {
   height: 50vh;
   padding: 0;
-  background-image: url(/img/newyork.jpg);
+  background-image: url(../img/newyork.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -780,7 +779,7 @@ body {
 }
 
 .contacts {
-  background-image: url(/img/backImgLast.jpg);
+  background-image: url(../img/backImgLast.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
